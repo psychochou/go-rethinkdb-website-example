@@ -1,0 +1,11 @@
+.layout__sidebar,.avert,.avert--sticky,.announcement-bar,.market-highlight,footer,.ecosystem-highlight,.content-heading,
+/*nytimes*/
+.newsletter-signup,
+.comments-button,
+.google_image_div,
+.FlexAd,
+.story-interrupter
+{
+	display:none!important;
+	/*https://design.tutsplus.com*/
+}

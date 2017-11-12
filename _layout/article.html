@@ -1,0 +1,14 @@
+ {% extends "_layout.html" %} {% block body %}
+
+
+<div class="article-main-content">
+    <div class="article">
+        <div class="article-inner">
+            <nav class="breadcrumb-nav">
+                <ul class="breadcrumb-list">
+                    {{breadcrumb|safe}}
+                </ul>
+            </nav>
+            {{content|safe}}
+        </div>
+        {% endblock %}

@@ -1,0 +1,27 @@
+{% extends "_layout.html" %} {% block body %}{% for admin in items %}
+
+<div class="medium-list__item">
+    <a href="/a/{{admin.id}}">
+        <div class="medium-list__image">
+            <div class="medium-list__image-s" style="background-image:url(/resource/{{admin.image}});"></div>
+        </div>
+        <div class="medium-list__footer">
+            <div class="medium-list__footer-container mobile-flex-vc">
+                <div class="medium-list__title line-clamp--2">
+                    <span>{{admin.title}}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+{% endfor %}
+
+<div id="infinite">
+</div>
+<div class="loading">
+    <div class="loading__indicator" id="indicator"></div>
+    <div class="nomore" id="nomore">没有更多了</div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="zh-hans" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="/stylesheets/{{fileCss}}">
+</head>
+
+<body>
+    <div class="layout">
+
+        <div class="header{% if type==2 %} header-fixed{% endif %}">
+            <div class="header-logo"><a href="/"><i class="material-icons">home</i></a></div>
+        </div>
+        {% if (type==0) || (type==1) %}
+
+        <div class="nav">
+            <a class="nav__item active" id="menu-home" href="/">主页</a>
+            <a class="nav__item" id="menu-health" href="/t/health">健康 </a>
+            <a class="nav__item" id="menu-foods" href="/t/foods">美食</a>
+            <a class="nav__item" id="menu-encyclopedia" href="/t/encyclopedia">百科</a>
+            <a class="nav__item" href="/t/tools">工具</a>
+        </div>
+        {% endif %} {% if type==0 %}
+
+        <div class=swipe id=slider>
+            <div class=swipe-wrap>
+                <div><a class=swipe-link href=/t/周易><img class=slider-img src=https://www.everstore.cn/resource/Hj71XEOiU.jpg></a>
+                    <h2 class=swiper-cite><em class=swipe-title>整个中华文明都源于《周易》</em></h2>
+                </div>
+                <div><a class=swipe-link href=/t/孙子兵法><img class=slider-img style=margin-top:-70px src=https://www.everstore.cn/resource/7Os9LKSkX.jpg></a>
+                    <h2 class=swiper-cite><em class=swipe-title>《孙子兵法》无往而不胜</em></h2>
+                </div>
+                <div><a href=/t/菜谱><img class=slider-img style=margin-top:-100px src=https://www.everstore.cn/resource/7rUlT.jpg></a>
+                    <h2 class=swiper-cite><em class=swipe-title>口水直流美食荟萃</em></h2>
+                </div>
+            </div>
+        </div> {% endif %} {% block body %}{% endblock %} {% if (type==0) || (type==1) %}
+        <script type="text/javascript" src="/javascripts/fetch.min.js"></script>
+        {% endif %} {% if type==0 %}
+        <script type="text/javascript" src="/javascripts/swipe.min.js"></script>
+        {% endif %}
+        <script type="text/javascript" src="/javascripts/{{fileJavaScript}}"></script>
+</body>
+
+</html>

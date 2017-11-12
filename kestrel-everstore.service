@@ -1,0 +1,14 @@
+[Unit]
+Description=Example .NET Web API Application running on Ubuntu
+
+[Service]
+WorkingDirectory=/root/publish
+ExecStart=/usr/local/bin/dotnet /root/publish/EverStore.dll
+Restart=always
+RestartSec=10  # Restart service after 10 seconds if dotnet service crashes
+SyslogIdentifier=EverStore
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target

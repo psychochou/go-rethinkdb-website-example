@@ -1,0 +1,12 @@
+[Unit]
+Description=everstore
+
+[Service]
+ExecStart=/root/go/EverStore
+WorkingDirectory=/root/go
+RestartSec=10
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
